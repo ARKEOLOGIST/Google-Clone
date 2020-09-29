@@ -5,6 +5,7 @@ import AppsIcon from '@material-ui/icons/Apps';
 import { Avatar } from '@material-ui/core';
 
 import Google from '../assets/google.png';
+import Search from './Search';
 
 function Home() {
     return (
@@ -20,7 +21,7 @@ function Home() {
             <div className="main">
             <img src={Google}/>
             <div className="inputfield">
-                
+                <Search/>
             </div>
             </div>
         </div>

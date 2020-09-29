@@ -16,7 +16,7 @@
     text-decoration: inherit;
     line-height: 24px;
     color: rgba(0,0,0,0.9);
-    font-size: 14px;
+    font-size: 14.5px;
 }
 
 .header a:hover {
@@ -35,7 +35,11 @@
 }
 
 .main {
-    margin: 140px auto;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 140px;
 }
 
 .main > img {
