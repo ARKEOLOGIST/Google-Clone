@@ -24,6 +24,22 @@ function Home() {
                 <Search/>
             </div>
             </div>
+            <div className="region">
+                <Link to="/region">India</Link>
+            </div>
+            <div className="footer">
+                <div className="footer_left">
+                    <Link to="/advertising">Advertising</Link>
+                    <Link to="/business">Business</Link>
+                    <Link to="/about">About</Link>
+                    <Link to="/how_search_works">How Search Works</Link>
+                </div>
+                <div className="footer_right">
+                    <Link to="/privacy">Privacy</Link>
+                    <Link to="/terms">Terms</Link>
+                    <Link to="/settings">Settings</Link>
+                </div>
+            </div>
         </div>
     );
 }
