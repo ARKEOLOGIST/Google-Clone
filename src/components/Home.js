@@ -40,6 +40,19 @@ function Home() {
                     <Link to="/settings">Settings</Link>
                 </div>
             </div>
+            <div className="invisible">
+                    <div className="invisible_right">
+                        <Link to="/privacy">Privacy</Link>
+                        <Link to="/terms">Terms</Link>
+                        <Link to="/settings">Settings</Link>
+                    </div>
+                    <div className="invisible_left">
+                        <Link to="/advertising">Advertising</Link>
+                        <Link to="/business">Business</Link>
+                        <Link to="/about">About</Link>
+                        <Link to="/how_search_works">How Search Works</Link>
+                    </div>
+            </div>
         </div>
     );
 }
