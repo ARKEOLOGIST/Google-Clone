@@ -19,7 +19,7 @@ function Home() {
                 </div>
             </div>
             <div className="main">
-            <img src={Google}/>
+            <img src={Google} alt="Google"/>
             <div className="inputfield">
                 <Search/>
             </div>

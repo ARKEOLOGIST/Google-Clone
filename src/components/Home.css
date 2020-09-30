@@ -47,6 +47,10 @@
     height: 90px;
 }
 
+.inputfield {
+    margin-top: 30px;
+}
+
 .footer {
     display: flex;
     justify-content: space-between;

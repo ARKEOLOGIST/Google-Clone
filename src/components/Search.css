@@ -4,9 +4,9 @@
     border: 1px solid lightgray;
     height: 50px;
     padding: 10px 20px;
-    width: 85vw;
     border-radius: 1000px;
-    margin-top: 30px;
+    margin: 0 auto;
+    width: 90vw;
     max-width: 560px;
 }
 
@@ -46,4 +46,37 @@
     background-color: #f8f8f8;
     border: 1px solid #c6c6c6;
     color: #222;
+}
+
+.language {
+    margin : 0 auto;
+    padding: 10px;
+    font-size: 13px;
+    text-align: center;
+}
+
+.offer {
+    display: inline-block;
+}
+
+.language a {
+    margin: 0 6px;
+    text-decoration: none;
+    color: #1a0dab;
+    line-height: 28px;
+    display: inline-block;
+}
+
+.language a:hover {
+    text-decoration: underline;
+}
+
+.language a:visited {
+    color: #609;
+}
+
+@media only screen and (max-width: 640px) {
+    .language a {
+        margin: 0 4px;
+    }
 }
