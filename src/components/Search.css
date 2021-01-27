@@ -48,6 +48,10 @@
     color: #222;
 }
 
+.hidden {
+    display: none;
+}
+
 .language {
     margin : 0 auto;
     padding: 10px;

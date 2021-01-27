@@ -3,29 +3,37 @@ import './Search.css';
 import SearchIcon from '@material-ui/icons/Search';
 import MicIcon from '@material-ui/icons/Mic';
 import { Button } from '@material-ui/core';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
+import { useStateValue } from '../StateProvider';
+import { actionTypes } from '../reducer';
 
 
-function Search() {
+function Search({ hide = false }) {
 
     const [input, setInput] = useState("");
+    const history = useHistory();
 
     const search = e => {
         e.preventDefault();
         console.log(input);
+        history.push('/search');
     }
 
     return (
-        <div className="Search">
+        <form className="Search">
             <div className="textbox">
                 <SearchIcon className="inputIcon" style={{color: 'gray'}}/>
                 <input value={input} onChange={e => setInput(e.target.value)}/>
                 <MicIcon/>
             </div>
-            <div className="buttons">
-                <Button onClick={search} variant="outlined">Google Search</Button>
+            {hide?<div className="buttons">
+                <Button type="submit" onClick={search} variant="outlined">Google Search</Button>
                 <Button variant="outlined">I'm Feeling Lucky</Button>
-            </div>
+            </div>:<div className="buttons">
+                <Button className="hidden" type="submit" onClick={search} variant="outlined">Google Search</Button>
+                <Button className="hidden" variant="outlined">I'm Feeling Lucky</Button>
+            </div>}
+            
             <div className="language">
                 <div className="offer">Google offered in:</div>
                 <Link to="/language1">हिन्दी</Link>
@@ -38,7 +46,7 @@ function Search() {
                 <Link to="/language8">മലയാളം</Link>
                 <Link to="/language9">ਪੰਜਾਬੀ</Link>
             </div>
-        </div>
+        </form>
     )
 }
 
