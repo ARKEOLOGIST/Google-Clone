@@ -11,7 +11,8 @@
     z-index: 100;
     align-items: flex-start;
     padding: 30px;
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid grey;
+    min-width: 1020px;
 }
 
 .searchBody > .Search > .textbox {
@@ -55,10 +56,11 @@
 }
 
 .results {
-    max-width: 650px;
+    width: 600px;
     margin-top: 20px;
     margin-left: 240px;
     margin-bottom: 100px;
+    padding-bottom: 20px;
     font-size: 14px;
 }
 
