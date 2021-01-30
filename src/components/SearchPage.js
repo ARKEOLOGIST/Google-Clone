@@ -11,14 +11,12 @@ import ImageIcon from '@material-ui/icons/Image';
 import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 import RoomIcon from '@material-ui/icons/Room';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-
 import Search from './Search';
 
 function SearchPage() {
     const [term, dispatch] = useStateValue();
     const { data } = useSearch(term.search);
 
-    console.log(data);
 
     return (
         <div className="searchPage">
@@ -71,11 +69,14 @@ function SearchPage() {
             {true &&
             <div className="results">
                 <p className="resultCount">
-                    About {data?.searchInformation.formattedTotalResults} results ({data?.searchInformation.formattedSearchTime} seconds) for {term.search}
+                    About {data?.searchInformation?.formattedTotalResults} results ({data?.searchInformation?.formattedSearchTime} seconds) for {term.search}
                 </p>
-                {data?.items.map(item => (
-                    <div className="result">
+                {data?.items.map((item,id) => (
+                    <div className="result" key={id}>
                         <a href={item.link}>
+                            {item.pagemap?.cse_image?.length > 0 && item.pagemap?.cse_image[0]?.src && (
+                                <img className="resultImage" src={item.pagemap?.cse_image?.length > 0 && item.pagemap?.cse_image[0]?.src} alt=""></img>
+                            )}
                             {item.displayLink}
                         </a>
                         <a className="resultTitle" href={item.link}>

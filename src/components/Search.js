@@ -26,13 +26,13 @@ function Search({ hide = false }) {
     return (
         <form className="Search">
             <div className="textbox">
-                <SearchIcon className="inputIcon" style={{color: 'gray'}}/>
+                <SearchIcon onClick={search} className="inputIcon" style={{color: 'gray'}}/>
                 <input value={input} onChange={e => setInput(e.target.value)}/>
                 <MicIcon/>
             </div>
             {!hide?<div className="buttons">
-                <Button type="submit" onClick={search} variant="outlined">Google Search</Button>
-                <Button variant="outlined">I'm Feeling Lucky</Button>
+                <Button className="submitButton" type="submit" onClick={search} variant="outlined">Google Search</Button>
+                <Button className="submitButton" variant="outlined">I'm Feeling Lucky</Button>
             </div>:null}
             
             {!hide?<div className="language">
