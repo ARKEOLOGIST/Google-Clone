@@ -14,7 +14,6 @@ function Search({ hide = false }) {
     const [input, setInput] = useState("");
     const history = useHistory();
 
-    console.log(hide);
     const search = e => {
         e.preventDefault();
         dispatch({
