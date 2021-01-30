@@ -1,0 +1,22 @@
+.searchLogo {
+    object-fit: contain;
+    height: 50px;
+    margin-right: 50px;
+}
+
+.searchHeader {
+    position: sticky;
+    display: flex;
+    background-color: white;
+    z-index: 100;
+    align-items: flex-start;
+    padding: 30px;
+    border-bottom: 1px solid lightgray;
+}
+
+.searchBody > .Search > .textbox {
+    margin-top: 0;
+    width: unset;
+    margin: unset;
+    max-width: unset;
+}

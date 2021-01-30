@@ -14,9 +14,9 @@ function Search({ hide = false }) {
     const [input, setInput] = useState("");
     const history = useHistory();
 
+    console.log(hide);
     const search = e => {
         e.preventDefault();
-        console.log(input);
         dispatch({
             type: actionTypes.SET_SEARCH_TERM,
             search: input
@@ -31,15 +31,12 @@ function Search({ hide = false }) {
                 <input value={input} onChange={e => setInput(e.target.value)}/>
                 <MicIcon/>
             </div>
-            {hide?<div className="buttons">
+            {!hide?<div className="buttons">
                 <Button type="submit" onClick={search} variant="outlined">Google Search</Button>
                 <Button variant="outlined">I'm Feeling Lucky</Button>
-            </div>:<div className="buttons">
-                <Button className="hidden" type="submit" onClick={search} variant="outlined">Google Search</Button>
-                <Button className="hidden" variant="outlined">I'm Feeling Lucky</Button>
-            </div>}
+            </div>:null}
             
-            <div className="language">
+            {!hide?<div className="language">
                 <div className="offer">Google offered in:</div>
                 <Link to="/language1">हिन्दी</Link>
                 <Link to="/language2">বাংলা</Link>
@@ -50,7 +47,7 @@ function Search({ hide = false }) {
                 <Link to="/language7">ಕನ್ನಡ</Link>
                 <Link to="/language8">മലയാളം</Link>
                 <Link to="/language9">ਪੰਜਾਬੀ</Link>
-            </div>
+            </div>:null}
         </form>
     )
 }
