@@ -20,3 +20,36 @@
     margin: unset;
     max-width: unset;
 }
+
+.searchOptions {
+    display: flex;
+    align-items: center;
+    color: grey;
+    margin-top: 40px;
+    margin-bottom: -20px;
+}
+
+.searchOptions a,.optionsRight {
+    text-decoration: none;
+    color: gray;
+}
+
+.optionsLeft,.optionsRight {
+    display: flex;
+}
+
+.optionsRight {
+    margin-left: 80px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.option a {
+    margin-left: 5px;
+}
